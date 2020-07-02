@@ -7,7 +7,7 @@ description: >
 #baseurl: "/bulma-clean-theme"
 url: "http://anjani.live"
 permalink: pretty
-#favicon: /path/to/favicon.png
+favicon: /favicon-32x32.png
 #gh_sponsor: chrisrhymes
 hide_share_buttons: false
 
