@@ -50,31 +50,30 @@ It was a feature request but it was a really small addition and when I submitted
 for my future work. 
 
 KDEConnect Android app has a persistent notification indicator but didn't really did anything besides telling if your phone is 
-connected to another device which was not very usefull. 
+connected to another device which was not very useful. 
 
 I added two action buttons in the notification, _Send Files_ and _Run Command_. So now, after my addition users could now 
 use these two features without opening KDEConnect App!!! and all it really took was this much.
 
 ```java
  if (deviceIds.size() == 1) {
-                // Adding two action buttons only when there is a single device connected.
-                // Setting up Send File Intent.
-                Intent sendFile = new Intent(this, SendFileActivity.class);
-                sendFile.putExtra("deviceId", deviceIds.get(0));
-                PendingIntent sendPendingFile = PendingIntent.getActivity(this, 1, sendFile, PendingIntent.FLAG_UPDATE_CURRENT);
-                notification.addAction(0, getString(R.string.send_files), sendPendingFile);
+    // Adding two action buttons only when there is a single device connected.
+    // Setting up Send File Intent.
+    Intent sendFile = new Intent(this, SendFileActivity.class);
+    sendFile.putExtra("deviceId", deviceIds.get(0));
+    PendingIntent sendPendingFile = PendingIntent.getActivity(this, 1, sendFile, PendingIntent.FLAG_UPDATE_CURRENT);
+    notification.addAction(0, getString(R.string.send_files), sendPendingFile);
 
-                // Checking if there are registered commands and adding the button.
-                Device device = getDevice(deviceIds.get(0));
-                RunCommandPlugin plugin = (RunCommandPlugin) device.getPlugin("RunCommandPlugin");
-                if (plugin != null && !plugin.getCommandList().isEmpty()) {
-                    Intent runCommand = new Intent(this, RunCommandActivity.class);
-                    runCommand.putExtra("deviceId", deviceIds.get(0));
-                    PendingIntent runPendingCommand = PendingIntent.getActivity(this, 2, runCommand, PendingIntent.FLAG_UPDATE_CURRENT);
-                    notification.addAction(0, getString(R.string.pref_plugin_runcommand), runPendingCommand);
-                }
-            }
+    // Checking if there are registered commands and adding the button.
+    Device device = getDevice(deviceIds.get(0));
+    RunCommandPlugin plugin = (RunCommandPlugin) device.getPlugin("RunCommandPlugin");
+    if (plugin != null && !plugin.getCommandList().isEmpty()) {
+        Intent runCommand = new Intent(this, RunCommandActivity.class);
+        runCommand.putExtra("deviceId", deviceIds.get(0));
+        PendingIntent runPendingCommand = PendingIntent.getActivity(this, 2, runCommand, PendingIntent.FLAG_UPDATE_CURRENT);
+        notification.addAction(0, getString(R.string.pref_plugin_runcommand), runPendingCommand);
         }
+    }
 ```
 
 And the result was this...
@@ -108,7 +107,7 @@ And the result is this...
   <img src="/img/KDEContrib/PR2.png" width="400" title="Me">
 </p>
 
-This _hack_ is very cheeky!!! And it was a lot fun to see this feature working again. Everyone loved this.
+This hack, is very cheeky!!! And it was a lot fun to see this feature working again. Everyone loved this.
 
 ### How I stayed
 
@@ -118,10 +117,9 @@ fix. Added this in the manifest.
 
 ```xml
 <activity
-            android:name="org.kde.kdeconnect.Plugins.ClibpoardPlugin.ClipboardFloatingActivity"
-            android:theme="@style/Theme.Transparent"
-            android:excludeFromRecents="true"/>
-
+    android:name="org.kde.kdeconnect.Plugins.ClibpoardPlugin.ClipboardFloatingActivity"
+    android:theme="@style/Theme.Transparent"
+    android:excludeFromRecents="true"/>
 ```
 
 [Here is the full merge request](https://invent.kde.org/network/kdeconnect-android/-/merge_requests/131).
