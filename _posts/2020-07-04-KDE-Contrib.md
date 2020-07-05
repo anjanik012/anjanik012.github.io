@@ -63,7 +63,7 @@ use these two features without opening KDEConnect App!!! and all it really took 
     sendFile.putExtra("deviceId", deviceIds.get(0));
     PendingIntent sendPendingFile = PendingIntent.getActivity(this, 1, sendFile, PendingIntent.FLAG_UPDATE_CURRENT);
     notification.addAction(0, getString(R.string.send_files), sendPendingFile);
-
+ 
     // Checking if there are registered commands and adding the button.
     Device device = getDevice(deviceIds.get(0));
     RunCommandPlugin plugin = (RunCommandPlugin) device.getPlugin("RunCommandPlugin");
@@ -72,8 +72,8 @@ use these two features without opening KDEConnect App!!! and all it really took 
         runCommand.putExtra("deviceId", deviceIds.get(0));
         PendingIntent runPendingCommand = PendingIntent.getActivity(this, 2, runCommand, PendingIntent.FLAG_UPDATE_CURRENT);
         notification.addAction(0, getString(R.string.pref_plugin_runcommand), runPendingCommand);
-        }
     }
+ }
 ```
 
 And the result was this...
