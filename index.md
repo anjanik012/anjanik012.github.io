@@ -14,7 +14,7 @@ image: /img/main_page.jpg
 Format: ! -->
 
 <p align="center">
-  <img src="/img/exp_less.png" width="120" title="Me">
+  <img src="/img/circle-cropped.png" width="200" title="Me">
 </p>
 
 # About Me
