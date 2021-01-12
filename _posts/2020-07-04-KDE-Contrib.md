@@ -4,7 +4,7 @@ title: How I started my journey in KDE (open-source) and stayed
 description: Here is how I started in open source and made a difference
 date: 2020-07-04
 hero_image: /img/KDEConnect.jpg
-hero_height: is-large
+hero_height: is-medium
 hero_darken: true
 image: /img/KDEConnect.jpg
 tags: open_source KDEConnect android

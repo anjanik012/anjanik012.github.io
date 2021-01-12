@@ -25,3 +25,19 @@
 #   link: /showcase/
 - name: Blog
   link: /blog/
+
+- name: Links
+  link: /#
+  dropdown:
+    - name: Resume
+      link: https://docs.google.com/document/d/1N3t-whkTslCj2iCKjkcBpS3nvSkSDX2KlSRq_Gsf7K8/edit?usp=sharing
+    - name: LinkedIn
+      link: https://www.linkedin.com/in/anjanik012/
+    - name: GitHub
+      link: https://github.com/anjanik012
+    - name: KDE Invent
+      link: https://invent.kde.org/anjani
+    - name: Twitter
+      link: https://twitter.com/anjanik012
+    - name: Telegram
+      link: https://t.me/anjanik012    
