@@ -70,6 +70,9 @@ highlighter: rouge
 
 footer_menu: example_footer_menu
 
+feed:
+  tags: true
+
 # collections:
 #   products: 
 #     output: true
