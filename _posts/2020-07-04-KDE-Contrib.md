@@ -7,7 +7,7 @@ hero_image: /img/KDEConnect.jpg
 hero_height: is-large
 hero_darken: true
 image: /img/KDEConnect.jpg
-tags: open-source kde android
+tags: open_source KDEConnect android
 canonical_url: https://www.anjani.live/2020/07/04/KDE-Contrib.html
 ---
 
